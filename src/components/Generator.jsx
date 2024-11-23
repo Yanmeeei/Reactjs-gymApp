@@ -42,7 +42,7 @@ function Generator(props) {
 
     return (
         <div>
-            <SectionWrapper header={"Generate your workout"} title={['IT\'s', 'Huge', 'o\'clock']}>
+            <SectionWrapper header={"Generate your workout"} title={['It\'s', 'Huge', 'o\'clock']}>
                 <Header index={'01'} title={'Pick your Choice'} description={'Select workout'}/>
                 <div className={'grid grid-cols-2 sm:grid-cols-4 gap-4'}>
                     {Object.keys(WORKOUTS).map((type, idx) => {
@@ -59,11 +59,12 @@ function Generator(props) {
                     })}
                 </div>
                 <Header index={'02'} title={'Lock on Targets'} description={'Select muscle'}/>
-                <div className={'bg-slate-950 border border-solid border-blue-400 rounded-b-lg flex flex-col'}>
-                    <button onClick={toggleModel}
-                            className={'relative p3 flex items-center justify-center bg-slate-950 p-3 border border-solid border-blue-400 rounded-b-lg'}>
-                        <p className={'uppercase'}>{muscles.length === 0 ? "Select Muscle Groups" : (muscles.join(' '))}</p>
-                        <i className="fa-solid absolute right-3 top-1/2 -translate-y-1/2 fa-caret-down"></i>
+                <div className="relative bg-slate-950 border border-solid border-blue-400 rounded-b-lg flex flex-col max-w-[400px] w-full mx-auto">
+                    <button
+                        onClick={toggleModel}
+                        className="relative p3 flex items-center justify-center bg-slate-950 p-3 border border-solid border-blue-400 rounded-b-lg">
+                        <p className="uppercase">{muscles.length === 0 ? "Select Muscle Groups" : muscles.join(' ')}</p>
+                        <i className="fa-solid p3 absolute right-3 top-1/2 -translate-y-1/2 fa-caret-down"></i>
                     </button>
                     {
                         showModel && (
@@ -98,7 +99,7 @@ function Generator(props) {
                         )
                     })}
                 </div>
-                <Button func={updateWorkout} text={"Formulate"} />
+                <Button func={updateWorkout} text={"Formulate"}/>
             </SectionWrapper>
 
         </div>
