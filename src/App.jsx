@@ -14,10 +14,10 @@ function App() {
         if (muscles.length === 0) {
             return
         }
-        console.log(poison, muscles, goal)
         let newWorkout = generateWorkout({poison, muscles, goal})
-        console.log(newWorkout)
+        // console.log(newWorkout)
         setWorkout(newWorkout)
+        window.location.href = '#workout'
     }
     return (
         <main

@@ -42,7 +42,7 @@ function Generator(props) {
 
     return (
         <div>
-            <SectionWrapper header={"Generate your workout"} title={['It\'s', 'Huge', 'o\'clock']}>
+            <SectionWrapper id={'generate'} header={"Generate your workout"} title={['It\'s', 'Huge', 'o\'clock']}>
                 <Header index={'01'} title={'Pick your Choice'} description={'Select workout'}/>
                 <div className={'grid grid-cols-2 sm:grid-cols-4 gap-4'}>
                     {Object.keys(WORKOUTS).map((type, idx) => {
